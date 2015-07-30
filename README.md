@@ -68,12 +68,18 @@ Now modify the render function to render a loading view if we don't have any mov
 Let's render a list of movies instead of a single one! We'll use the ListView component to do so.
 Why is a ListView better than just rendering all of these elements or putting them in a ScrollView? Despite React being fast, rendering a possibly infinite list of elements could be slow. ListView schedules rendering of views so that you only display the ones on screen and those already rendered but off screen are removed from the native view hierarchy.
 
+![Image of List]
+(http://content.screencast.com/users/shimilid/folders/Jing/media/5fbe3b6d-4dc5-4694-82b3-82a2d8b6b4c0/00000015.png)
+
 1. add ListView to the require list.
 2. update the render method to render a ListView if the movies are loaded. Read the Component Docs https://facebook.github.io/react-native/docs/listview.html#content
 
 # Want Some More?
 ## Adding Tabs
 React Native offers a native Tabs component called TabBarIOS. 
+
+![Image of Tabs]
+(http://content.screencast.com/users/shimilid/folders/Jing/media/1aad7a87-8a15-4875-83d1-4cd537a9cd79/00000014.png)
 
 1. Copy your implementation to a separate "Featured" module and add a "Search" module.
 2. In index.ios.js import the new modules.
@@ -107,3 +113,8 @@ React Native also offers a native Navigator component that intorudces the native
 ```
 
 *Now watch the MAGIC!*
+
+![Image of Featured]
+(http://content.screencast.com/users/shimilid/folders/Jing/media/e439c911-636e-4c18-867c-acf44c67b35b/00000012.png)
+![Image of Movie Details]
+(http://content.screencast.com/users/shimilid/folders/Jing/media/f199a24f-049a-46f5-952b-0222ec650376/00000013.png)
