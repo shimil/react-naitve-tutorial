@@ -89,7 +89,7 @@ React Native offers a native Tabs component called TabBarIOS.
 React Native also offers a native Navigator component that intorudces the native iOS behaviour of a navigation stack allowing navigation to/back from content. The component is called NavigatorIOS. Read More about it here https://facebook.github.io/react-native/docs/navigatorios.html#content.
 
 1. Copy your Featured implementation into a MovieList component.
-2. Wrap your single movie render (item in ListView) in a TouchableHighlight component to allow an addition of touch behaviour to it (https://facebook.github.io/react-native/docs/touchablehighlight.html#content) 
+2. Wrap your single movie render (item in ListView) in a <TouchableHighlight/> component to allow an addition of touch behaviour to it (https://facebook.github.io/react-native/docs/touchablehighlight.html#content) 
 3. Update you Featured component to render a NavigatorIOS with an initialRoute of the MovieList 
 ```             
   <NavigatorIOS
@@ -103,13 +103,15 @@ React Native also offers a native Navigator component that intorudces the native
 4. Create a MovieDetail component that receives the movie as a prop and renders it somehow
 5. Route the MovieList TouchableHighlight onPress to a method that navigates to a movie detail view. A "navigator" prop is passed automatically to the view. Something like this:
 ```
-    showMovieDetail: function(movie) {
-        this.props.navigator.push({
-            title: movie.title,
-            component: MovieDetail,
-            passProps: {movie}
-        });
-    }
+  <TouchableHighligh onPress="{() => this.showMovieDetail(movie)}"/>
+  
+  showMovieDetail: function(movie) {
+      this.props.navigator.push({
+          title: movie.title,
+          component: MovieDetail,
+          passProps: {movie}
+      });
+  }
 ```
 
 *Now watch the MAGIC!*
