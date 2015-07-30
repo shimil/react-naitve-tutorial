@@ -1,5 +1,7 @@
 # react-naitve-tutorial
-Let's create a demo movies app.
+This tutorial is absolutely based on React Native's official tutrial. You can find it at https://facebook.github.io/react-native/docs/tutorial.html.
+
+Now... let's create a demo movies app.
 
 # Installations
 1. `brew install watchman`
