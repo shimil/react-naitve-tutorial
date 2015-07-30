@@ -1,5 +1,7 @@
 # react-naitve-tutorial
-This tutorial is absolutely based on React Native's official tutrial. You can find it at https://facebook.github.io/react-native/docs/tutorial.html.
+This tutorial is absolutely based on React Native's official tutorial + Appcoda tutorial. You can find them at:
+1. https://facebook.github.io/react-native/docs/tutorial.html.
+2. http://www.appcoda.com/react-native-introduction/
 
 Now... let's create a demo movies app.
 
