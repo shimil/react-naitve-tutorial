@@ -72,4 +72,38 @@ Why is a ListView better than just rendering all of these elements or putting th
 2. update the render method to render a ListView if the movies are loaded. Read the Component Docs https://facebook.github.io/react-native/docs/listview.html#content
 
 # Want Some More?
-1. Try adding a TabBarIOS to your app. Create a "Featured" tab, and a "Search" tab.
+## Adding Tabs
+React Native offers a native Tabs component called TabBarIOS. 
+
+1. Copy your implementation to a separate "Featured" module and add a "Search" module.
+2. In index.ios.js import the new modules.
+3. In index.ios.js clean the unused code and leave a render method that renders a TabBarIOS component with two items. You should render your modules as Directives. Please refer to React Native's Component Docs for implementation details: https://facebook.github.io/react-native/docs/tabbarios.html#content
+
+## Adding Navigator
+React Native also offers a native Navigator component that intorudces the native iOS behaviour of a navigation stack allowing navigation to/back from content. The component is called NavigatorIOS. Read More about it here https://facebook.github.io/react-native/docs/navigatorios.html#content.
+
+1. Copy your Featured implementation into a MovieList component.
+2. Wrap your single movie render (item in ListView) in a TouchableHighlight component to allow an addition of touch behaviour to it (https://facebook.github.io/react-native/docs/touchablehighlight.html#content) 
+3. Update you Featured component to render a NavigatorIOS with an initialRoute of the MovieList 
+```             
+  <NavigatorIOS
+    style={styles.container}
+    initialRoute={{
+      title: 'Featured Movies',
+      component: MovieList
+    }}
+  />
+```
+4. Create a MovieDetail component that receives the movie as a prop and renders it somehow
+5. Route the MovieList TouchableHighlight onPress to a method that navigates to a movie detail view. A "navigator" prop is passed automatically to the view. Something like this:
+```
+    showMovieDetail: function(movie) {
+        this.props.navigator.push({
+            title: movie.title,
+            component: MovieDetail,
+            passProps: {movie}
+        });
+    }
+```
+
+*Now watch the MAGIC!*
