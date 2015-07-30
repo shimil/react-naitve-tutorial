@@ -71,5 +71,5 @@ Why is a ListView better than just rendering all of these elements or putting th
 1. add ListView to the require list.
 2. update the render method to render a ListView if the movies are loaded. Read the Component Docs https://facebook.github.io/react-native/docs/listview.html#content
 
-# More
+# Want Some More?
 1. Try adding a TabBarIOS to your app. Create a "Featured" tab, and a "Search" tab.
