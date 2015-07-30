@@ -7,8 +7,9 @@ This tutorial is absolutely based on React Native's official tutorial + Appcoda'
 Now... let's create a demo movies app.
 
 # Installations
-1. `brew install watchman`
-2. `npm install -g react-native-cli`
+1. Install xCode
+2. `brew install watchman`
+3. `npm install -g react-native-cli`
 
 # Set Ups
 1. **setting up a sample project** `react-native init MoviesSearch`
